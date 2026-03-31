@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Sadin | Cybersecurity Researcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #05080a;
+            --bg-glass: rgba(17, 25, 40, 0.75);
+            --primary-blue: #00d4ff;
+            --secondary-blue: #0077ff;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            margin: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated Grid Background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 212, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .name-scan {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 800;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Glowing text effect */
+        .name-scan {
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        .role {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            font-weight: 300;
+            border-right: 2px solid var(--primary-blue);
+            padding-right: 5px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink { 50% { border-color: transparent; } }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+        }
+
+        h2::after {
+            content: "";
+            height: 1px;
+            flex-grow: 1;
+            background: linear-gradient(90deg, var(--primary-blue), transparent);
+            margin-left: 20px;
+        }
+
+        /* Glassmorphism Cards */
+        .card {
+            background: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card:hover {
+            border-color: var(--primary-blue);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .btn {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 1px solid var(--primary-blue);
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: rgba(0, 212, 255, 0.1);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            background: rgba(0, 212, 255, 0.1);
+            color: var(--primary-blue);
+            font-size: 0.85rem;
+            margin: 5px;
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px;
+            opacity: 0.6;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="name-scan">Muhammed Sadin</div>
+        <div class="role">Cybersecurity Researcher | BCA Student</div>
+        <div style="margin-top: 40px;">
+            <a href="#about" class="btn">View Profile</a>
+            <a href="https://github.com/sadinalungal" class="btn">GitHub</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2>01. Background</h2>
+            <div class="card">
+                <p>Focusing on the intersection of <strong>Network Defense</strong> and <strong>Linux Security</strong>. I am currently pursuing my BCA while conducting independent research into vulnerability assessment and tool development. I specialize in navigating complex Linux environments to analyze and secure digital assets.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>02. Security Tools</h2>
+            <div class="project-grid">
+                <div class="card">
+                    <h3>Port Scanner V1</h3>
+                    <p>A custom reconnaissance tool built to identify network vulnerabilities through efficient service discovery.</p>
+                    <div class="skill-tag">Python</div>
+                    <div class="skill-tag">Networking</div>
+                    <div class="skill-tag">Linux</div>
+                </div>
+                <div class="card">
+                    <h3>Linux Research</h3>
+                    <p>Documenting system hardening techniques and bash automation for secure server deployments.</p>
+                    <div class="skill-tag">Bash</div>
+                    <div class="skill-tag">Security</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>03. Get In Touch</h2>
+            <div class="card" style="text-align: center;">
+                <p>I am currently open to collaboration on security projects or research opportunities.</p>
+                <a href="mailto:sadinalungal@gmail.com" class="btn">sadinalungal@gmail.com</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        Designed & Built by Muhammed Sadin &bull; 2026
+    </footer>
+
+</body>
+</html>
